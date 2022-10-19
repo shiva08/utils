@@ -15,7 +15,7 @@ def write_correct_json(a,sql):
 			    json.dump(sql[fi], f, ensure_ascii=False, indent=2)
 		except Exception as e:
 			print(e)
-def wrong_feature_flags(a,b, flags_file_path):
+def fix_config_files(a,b, flags_file_path):
 	sql = {}
 	compute = {}
 
@@ -105,4 +105,4 @@ flags_file = "C:\\Users\\snutheti\\Desktop\\flags.txt"
 
 # find_all_fx_controls(file2)
 # remove_duplicates_in_xml(file)
-wrong_feature_flags(a,b,flags_file)
+fix_config_files(a,b,flags_file)
