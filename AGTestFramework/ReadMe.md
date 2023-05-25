@@ -19,7 +19,7 @@ Tracking Deployment status
 1. Sample deployment name : shiva_sql2016sp3-ws2019_enterprise_20230524194445576547 at https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/0009fc4d-e310-4e40-8e63-c48a23e9cdc1/resourceGroups/shivdeeptestframes/deployments
 2. Format : name_image_sku_yyyymmddhhmmssmicrosecond
 
-Template used: AG End to end deployment template from production downloaded on 05/24/2023
+Template used: AG End to end deployment template from portal - production downloaded on 05/24/2023
 
 Further reading
 1. https://github.com/microsoft/tigertoolbox/tree/master/AzureSQLVM/e2e-ag-setup
