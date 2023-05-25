@@ -1,0 +1,318 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "existingVirtualNetworkName": {
+            "value": "dongdc13-vnet"
+        },
+        "existingVirtualNetworkResourceGroupName": {
+            "value": "dongdc13"
+        },
+        "VMNamesForPrimaryAndSecondaryReplicas": {
+            "value": [
+                "myVm-1",
+                "myVm-2"
+            ]
+        },
+        "subnetNames": {
+            "value": [
+                "dongsub1",
+                "dongsub2"
+            ]
+        },
+        "listOfFailoverClusterIps": {
+            "value": [
+                null,
+                null
+            ]
+        },
+        "listOfListenerIps": {
+            "value": [
+                "10.0.1.24",
+                "10.0.2.21"
+            ]
+        },
+        "listOfPublicIps": {
+            "value": [
+                "myVm-1-ip",
+                "myVm-2-ip"
+            ]
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "pipDeleteOption": {
+            "value": "Detach"
+        },
+        "nicDeleteOption": {
+            "value": "Detach"
+        },
+        "enableAcceleratedNetworking": {
+            "value": true
+        },
+        "networkSecurityGroupRules": {
+            "value": []
+        },
+        "replicaRoleArray": {
+            "value": [
+                "Primary",
+                "Secondary"
+            ]
+        },
+        "replicaAutoFailArray": {
+            "value": [
+                "Manual",
+                "Manual"
+            ]
+        },
+        "replicaSyncCommitArray": {
+            "value": [
+                "Asynchronous_Commit",
+                "Asynchronous_Commit"
+            ]
+        },
+        "replicaReadableSecArray": {
+            "value": [
+                "No",
+                "No"
+            ]
+        },
+        "SizeForVirtualMachines": {
+            "value": "Standard_DS1_v2"
+        },
+        "LocalAdminUserName": {
+            "value": "myvmadmin"
+        },
+        "LocalAdminPassword": {
+            "value": null
+        },
+        "SQLServerImageType": {
+            "value": "SQL2022-WS2022"
+        },
+        "SQLServerSku": {
+            "value": "enterprise"
+        },
+        "SQLServerLicenseType": {
+            "value": "PAYG"
+        },
+        "SQLServiceAccountUserName": {
+            "value": "myvmadmin"
+        },
+        "SQLServiceAccountPassword": {
+            "value": null
+        },
+        "DomainUserName": {
+            "value": "myvmadmin"
+        },
+        "DomainUserPassword": {
+            "value": null
+        },
+        "domainFQDN": {
+            "value": "domain13.com"
+        },
+        "failoverClusterName": {
+            "value": "autoCluster"
+        },
+        "createNewStorageAccount": {
+            "value": "No"
+        },
+        "storageAccountName": {
+            "value": "shivdeepha"
+        },
+        "AvailabilityGroup": {
+            "value": "shivatestframeag"
+        },
+        "listenerName": {
+            "value": "autoListener"
+        },
+        "sqlConnectivityType": {
+            "value": "Private"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "rServicesEnabled": {
+            "value": "false"
+        },
+        "maxdop": {
+            "value": 0
+        },
+        "isOptimizeForAdHocWorkloadsEnabled": {
+            "value": false
+        },
+        "collation": {
+            "value": "SQL_Latin1_General_CP1_CI_AS"
+        },
+        "minServerMemoryMB": {
+            "value": 0
+        },
+        "maxServerMemoryMB": {
+            "value": 2147483647
+        },
+        "isLPIMEnabled": {
+            "value": false
+        },
+        "isIFIEnabled": {
+            "value": false
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "dataDisks1": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "deleteOption": "Detach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "myVm-1_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": null
+                },
+                {
+                    "lun": 1,
+                    "createOption": "attach",
+                    "deleteOption": "Detach",
+                    "caching": "None",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "myVm-1_DataDisk_1",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": null
+                }
+            ]
+        },
+        "dataDiskResources1": {
+            "value": [
+                {
+                    "name": "myVm-1_DataDisk_0",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 1024,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                },
+                {
+                    "name": "myVm-1_DataDisk_1",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 1024,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                }
+            ]
+        },
+        "dataDisks2": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "deleteOption": "Detach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "myVm-2_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": null
+                },
+                {
+                    "lun": 1,
+                    "createOption": "attach",
+                    "deleteOption": "Detach",
+                    "caching": "None",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "myVm-2_DataDisk_1",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": null
+                }
+            ]
+        },
+        "dataDiskResources2": {
+            "value": [
+                {
+                    "name": "myVm-2_DataDisk_0",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 1024,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                },
+                {
+                    "name": "myVm-2_DataDisk_1",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 1024,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                }
+            ]
+        },
+        "sqlStorageWorkloadType": {
+            "value": "OLTP"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "dataPath": {
+            "value": "F:\\data"
+        },
+        "dataDisksLUNs": {
+            "value": [
+                0
+            ]
+        },
+        "logPath": {
+            "value": "G:\\log"
+        },
+        "logDisksLUNs": {
+            "value": [
+                1
+            ]
+        },
+        "tempDbPath": {
+            "value": "D:\\tempDb"
+        },
+        "dataFileCount": {
+            "value": 8
+        },
+        "dataFileSize": {
+            "value": 8
+        },
+        "dataGrowth": {
+            "value": 64
+        },
+        "logFileSize": {
+            "value": 8
+        },
+        "logGrowth": {
+            "value": 64
+        },
+        "SQLSystemDbOnDataDisk": {
+            "value": false
+        }
+    }
+}

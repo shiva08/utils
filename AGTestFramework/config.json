@@ -1,0 +1,27 @@
+{
+    "allowedSKU": [
+        "enterprise",
+        "sqldev"
+    ],
+    "files": {
+        "images": "Images\\images_2.txt",
+        "parameters": "parameters.json",
+        "template": "template.json",
+        "powershell": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    },
+    "resource_group": {
+        "name": "shivdeeptests1",
+        "create": false
+    },
+    "password": "",
+    "ip_offset": 213,
+    "subnets": [
+        "10.0.1.0",
+        "10.0.2.0"
+    ],
+    "vmnames": [
+        "shivaVM-1",
+        "shivaVM-2"
+    ],
+    "deploymentName": "shivdeep"
+}
