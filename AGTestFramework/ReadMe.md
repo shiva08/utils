@@ -1,7 +1,7 @@
 Description
 1. Deploy end to end availability group with multiple images, skus
 2. Handles parallel deployments
-3. After finishing deployments, ip_offset (which is used for new ips, vmnames) will be updated in the config 
+3. After finishing deployments, ip_offset (which is used for new ips, vmnames, disks, etc) will be updated in the config 
 
 Prerequisites
 1. Ensure you have a valid domain controller, virtual network and necessary subnets. DNS server of vnet should be pointing to dcvm
