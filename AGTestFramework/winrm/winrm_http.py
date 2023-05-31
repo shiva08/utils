@@ -1,4 +1,4 @@
-# After running this python script, run this command on Azure cloud shell
+# After running this python script, run this command on Azure cloud shell to check if winrm is configured with 'http' and '5985'
 
 # $subscriptionId = "0009fc4d-e310-4e40-8e63-c48a23e9cdc1"
 # $resourceGroup = "shivawinrm0531"
