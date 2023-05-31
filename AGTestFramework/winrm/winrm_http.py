@@ -1,8 +1,30 @@
+# After running this python script, run this command on Azure cloud shell
+
+# $myAzureVMs | ForEach-Object -Parallel {
+#     $out = Invoke-AzVMRunCommand `
+#         -ResourceGroupName $_.ResourceGroupName `
+#         -Name $_.Name  `
+#         -CommandId 'RunPowerShellScript' `
+#         -ScriptString 'Get-WSManInstance winrm/config/listener -Enumerate'
+#     $a = @('HTTP','5985')
+#     $flag = $null -ne ($a | ? { $out.Value[0].Message -match $_ })
+#     $outs = $_.Name + " " + $flag.ToString()
+#     Write-Output $outs
+# }
+
+
+
+
+
+
+
 import json
 import re
 import subprocess
 from datetime import datetime
 
+password = ""  
+location = "westus"
 
 def update_datadisks(json_object, vm_array):
   for idx, vmname in enumerate(vm_array):
@@ -11,14 +33,6 @@ def update_datadisks(json_object, vm_array):
 
     json_object["parameters"]["dataDiskResources" + str(idx + 1)]["value"][0]["name"] = vmname + "_DataDisk_0"
     json_object["parameters"]["dataDiskResources" + str(idx + 1)]["value"][1]["name"] = vmname + "_DataDisk_1"
-
-location = "westus"
-password = ""  
-
-
-
-
-
 
 params = json.load(open('parameters.json'))
 template = json.load(open('template.json'))
@@ -86,16 +100,4 @@ for line in file.readlines():
     # print(result)
 
 
-# Run this on Azure cloud shell
 
-# $myAzureVMs | ForEach-Object -Parallel {
-#     $out = Invoke-AzVMRunCommand `
-#         -ResourceGroupName $_.ResourceGroupName `
-#         -Name $_.Name  `
-#         -CommandId 'RunPowerShellScript' `
-#         -ScriptString 'Get-WSManInstance winrm/config/listener -Enumerate'
-#     $a = @('HTTP','5985')
-#     $flag = $null -ne ($a | ? { $out.Value[0].Message -match $_ })
-#     $outs = $_.Name + " " + $flag.ToString()
-#     Write-Output $outs
-# }
