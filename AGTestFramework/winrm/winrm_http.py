@@ -1,5 +1,10 @@
 # After running this python script, run this command on Azure cloud shell
 
+# $subscriptionId = "0009fc4d-e310-4e40-8e63-c48a23e9cdc1"
+# $resourceGroup = "shivawinrm0531"
+# Set-AzContext -Subscription $subscriptionId 
+
+# $myAzureVMs = Get-AzVM -ResourceGroupName $resourceGroup -status | Where-Object {$_.PowerState -eq "VM running" -and $_.StorageProfile.OSDisk.OSType -eq "Windows"}
 # $myAzureVMs | ForEach-Object -Parallel {
 #     $out = Invoke-AzVMRunCommand `
 #         -ResourceGroupName $_.ResourceGroupName `
