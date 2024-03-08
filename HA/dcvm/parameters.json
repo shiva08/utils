@@ -1,0 +1,102 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "virtualMachineName": {
+            "value": "centralDCVM"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS2_v2"
+        },
+        "adminUsername": {
+            "value": "myvmadmin"
+        },
+        "virtualNetworkName": {
+            "value": "centraluseuap-vnet"
+        },
+        "networkInterfaceName": {
+            "value": "centraluseuapNic"
+        },
+        "networkSecurityGroupName": {
+            "value": "centraluseuapNSG"
+        },
+        "adminPassword": {
+            "value": "****"
+        },
+        "addressPrefix": {
+            "value": "10.0.0.0/16"
+        },
+        "subnetName": {
+            "value": "centraluseuap-subnet"
+        },
+        "subnetPrefix": {
+            "value": "10.0.0.0/24"
+        },
+        "publicIpAddressName": {
+            "value": "centraluseuapip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "domainName": {
+            "value": "Domain.com"
+        },
+        "OUPath": {
+            "value": null
+        },
+        "dnsIp": {
+            "value": "10.0.0.5"
+        },
+        "adPDCModulesURL": {
+            "value": "https://agtemplatestorage.blob.core.windows.net/templates/CreateADPDC.ps1.zip"
+        },
+        "adPDCConfigurationFunction": {
+            "value": "CreateADPDC.ps1\\CreateADPDC"
+        },
+        "domainAdminLogin": {
+            "value": "Domain\\myvmadmin"
+        },
+        "domainAdminPassword": {
+            "value": "****"
+        },
+        "SQLAccountName": {
+            "value": "myvmadmin"
+        },
+        "SQLAccountPassword": {
+            "value": "****"
+        },
+        "VirtualMachineList": {
+            "value": "vm1,vm2"
+        },
+        "SqlImageOffer": {
+            "value": "SQL2017-WS2016"
+        },
+        "vNetResourceGroup": {
+            "value": "NewHaDemo"
+        },
+        "availabilitySetName": {
+            "value": "NewHaDemo"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlStorageDisksCount": {
+            "value": 1
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": 2
+        },
+        "sqlAuthenticationLogin": {
+            "value": "myvmadmin"
+        },
+        "sqlAuthenticationPassword": {
+            "value": "****"
+        }
+    }
+}
