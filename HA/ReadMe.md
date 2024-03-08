@@ -9,5 +9,5 @@ Script to test AG feature (singlesubnet + multisubnet):
 8. Start runbook jobs and open the job, used templates, used dcvm resource group in browser
 
 Usage:
-Run pip install -r dependencies.txt
-Add password, connection_string values in config.json
+1. Run pip install -r dependencies.txt
+2. Add password, connection_string values in config.json
