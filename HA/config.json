@@ -1,0 +1,71 @@
+{
+    "name": "autoha",
+    "singlesubnet": true,
+    "multisubnet": true,
+    "subscription_id": "0009fc4d-e310-4e40-8e63-c48a23e9cdc1",
+    "dcvm": {
+        "create": true,
+        "location": "eastus",
+        "template_file_path": "dcvm/template.json",
+        "parameters_file_path": "dcvm/parameters.json",
+        "resource_group": "autoha03080929rg",
+        "deployment_name": "autoha03080929",
+        "password": "****"
+    },
+    "storage_account": {
+        "name": "autoha03080929sa",
+        "min_tls": "TLS1_2"
+    },
+    "loadbalancer": {
+        "name": "autoha03080929lb"
+    },
+    "subnets": [
+        "subnet-1",
+        "subnet-2"
+    ],
+    "automation": {
+        "account": "sqlvmrpautomation",
+        "location": "East US",
+        "resource_group": "sqlvmrpautomation",
+        "singlesubnet": {
+            "job_name": "autoha03080929single",
+            "runbook": {
+                "existing": "SQLVMAlwaysOnRunner",
+                "new": "autoha03080929single",
+                "type": "PowerShell",
+                "parameters": {
+                    "VaultName": "runnerkey",
+                    "SecretName": "SQLVM-AG-RUNNER--DCVM-PWD"
+                }
+            },
+            "storage_account": {
+                "name": "agtemplatestorage",
+                "connection_string": "****",
+                "container": {
+                    "existing": "templates",
+                    "template": {
+                        "existing": "AGListenerTemplate.json",
+                        "new": "autoha03080929.json"
+                    }
+                }
+            }
+        },
+        "multisubnet": {
+            "job_name": "autoha03080929multi",
+            "runbook": {
+                "existing": "MultiSubnetHARunner",
+                "new": "autoha03080929multi",
+                "type": "PowerShell72",
+                "rg_prefix": "autoha03080929"
+            },
+            "storage_account": {
+                "name": "storagemultisubnet",
+                "connection_string": "****",
+                "container": {
+                    "existing": "runner",
+                    "new": "autoha03080929"
+                }
+            }
+        }
+    }
+}
