@@ -111,7 +111,7 @@ class Auto:
 
 # Don't change config["name"]
 # Remember to delete the created resources, deletion isn't automated since there's high chance of deleting other's resources
-generate_new_config = False
+generate_new_config = True
 config_file = "config.json"
 config_helper_obj = ConfigHelper(config_file)
 config_helper_obj.read_config()
