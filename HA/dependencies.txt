@@ -7,5 +7,4 @@ azure-storage-blob
 azure-identity
 azure-mgmt-automation
 azure-mgmt-network
-webbrowser
 colorama
