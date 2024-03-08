@@ -11,3 +11,4 @@ Script to test AG feature (singlesubnet + multisubnet):
 Usage:
 1. Run pip install -r dependencies.txt
 2. Add password, connection_string values in config.json
+3. python auto.py
