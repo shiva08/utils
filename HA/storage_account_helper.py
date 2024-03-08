@@ -3,15 +3,6 @@ import webbrowser
 import json
 import urllib
 
-
-				# c["parameters"]["existingVnet"]["defaultValue"] = self.dcvm_parameters["parameters"]["virtualNetworkName"]["value"]
-				
-				# c["parameters"]["existingSubnet"]["defaultValue"] = self.dcvm_parameters["parameters"]["subnetName"]["value"]
-
-				# c["parameters"]["existingInternalLoadBalancer"]["defaultValue"] = self.config["loadbalancer"]["name"]
-				# c["parameters"]["Location"]["defaultValue"] = self.dcvm_parameters["parameters"]["location"]["value"]
-				# c["parameters"]["existingVmList"]["defaultValue"] = self.dcvm_parameters["parameters"]["VirtualMachineList"]["value"]
-
 edge_path = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
 webbrowser.register('edge', None, webbrowser.BackgroundBrowser(edge_path))
 
