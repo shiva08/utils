@@ -12,3 +12,5 @@ Usage:
 1. Run pip install -r dependencies.txt
 2. Add password, connection_string values in config.json
 3. python auto.py
+
+![image](https://github.com/shiva08/utils/assets/7246619/a1eb8b01-b9fb-4cff-b078-8a5aca68bcf9)
