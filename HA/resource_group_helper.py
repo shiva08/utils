@@ -1,3 +1,5 @@
+from azure.mgmt.resource import ResourceManagementClient
+
 class ResourceGroupHelper:
 	def __init__(self, resource_client):
 		self.resource_client = resource_client
