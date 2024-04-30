@@ -1,3 +1,5 @@
+# Helper to find all accessible subscriptions and storage accounts and change public network access from 'Enabled from all networks' to 'Enabled from selected virtual networks and IP addresses'
+
 from azure.mgmt.storage import StorageManagementClient
 from azure.identity import InteractiveBrowserCredential
 from azure.mgmt.storage.models import NetworkRuleSet, DefaultAction
